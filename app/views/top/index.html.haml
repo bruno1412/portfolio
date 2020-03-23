@@ -1,0 +1,175 @@
+%link(href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet")
+%div(class="MenuButton" data-text-default="Menu" data-text-clicked="×" href="#") Menu
+%header.HeaderNav
+  %ul#menu.menu
+    %li.menu__list--top TOP
+    %li.menu__list--profile PROFILE
+    %li.menu__list--skill SKILL
+    %li.menu__list--portfolio PORTFOLIO
+    %li.menu__list--contact CONTACT
+%section.top
+  %ul.top__name
+    %li.top__name--initial H
+    %li ideki
+    %li.top__name--initial S
+    %li akai's 
+    %li.top__name--initial P
+    %li ortfolio
+%section.profile
+  %p.paragraph
+  %h1.profile__heading Profile
+  %img(class="profile__img" src="assets/photo.jpg")
+  %div.profile__introduction
+    %p.greeting ご訪問いただきありがとうございます♪皆さん初めまして！
+    %p.greeting 平成７年生まれの筋肉系駆け出しエンジニアHidekiと申します。
+    %p.greeting 社会人歴は約２年で、とある外資系IT企業さんのテクニカルサポートチームで２年間勤めておりました。
+    %p.greeting 専門学校時代に初めてプログラミングを学び、その頃から様々な言語に興味を持つようになりました。
+    %p.greeting 結局、尽きない好奇心からエンジニアになろうと決意し、TECH:EXPERT夜間コースに半年間通い、卒業しました。
+    %p.greeting 現在はwebエンジニア業界を目指し、日々奮闘しております。
+    %p.greeting ちなみに趣味は筋トレ(主にパワーリフティング種目)で、１年間で69kgから91kg(計22kg)の増量を成功させました。
+%section.skill
+  %p.paragraph
+  %h1.skill__heading SKILL
+  %div.skill__block--description
+    %ul.skill__rate
+      %li.skill__rate--rate1
+      %li.skill__rate--rate2
+      %li.skill__rate--rate3
+    %ul.skill__description
+      %li.skill__description--rate 触れたことがある
+      %li.skill__description--rate ある程度コードが書ける、読める
+      %li.skill__description--rate ある程度開発が行える
+    %ul.skill__rate--second
+      %li.skill__rate--rate4
+      %li.skill__rate--rate5
+    %ul.skill__description--second
+      %li.skill__description--rate 自由に開発が行える
+      %li.skill__description--rate 完璧
+  %p.paragraph
+  %div.skill__block
+    %div.skill__block--SkillDetails
+      %h1.skill__block--title フロントエンド
+      %ul.SkillName
+        %li.SkillName__list 技術
+        %p.paragraph
+        %li.SkillName__list HTML5、CSS
+        %p.paragraph
+        %li.SkillName__list JavaScript
+        %p.paragraph
+        %li.SkillName__list JQuery
+        %p.paragraph
+        %li.SkillName__list HAML
+        %p.paragraph
+        %li.SkillName__list SASS
+      %ul.SkillRate
+        %li.SkillRate__list--skill　スキル
+        %p.paragraph
+        %li.SkillRate__list--rate4
+        %p.paragraph
+        %li.SkillRate__list--rate4
+        %p.paragraph
+        %li.SkillRate__list--rate3
+        %p.paragraph
+        %li.SkillRate__list--rate4
+        %p.paragraph
+        %li.SkillRate__list--rate4
+    %div.skill__block--SkillDetails
+      %h1.skill__block--title バックエンド
+      %ul.SkillName
+        %li.SkillName__list 技術
+        %p.paragraph
+        %p.paragraph
+        %p.paragraph
+        %p.paragraph
+        %li.SkillName__list Ruby(Ruby On Rails)
+      %ul.SkillRate
+        %li.SkillRate__list--skill　スキル
+        %p.paragraph
+        %p.paragraph
+        %p.paragraph
+        %p.paragraph
+        %li.SkillRate__list--rate3
+  %p.paragraph
+  %p.paragraph
+  %div.skill__block
+    %div.skill__block--SkillDetails
+      %h1.skill__block--title データベース
+      %ul.SkillName
+        %li.SkillName__list 技術
+        %p.paragraph
+        %p.paragraph
+        %li.SkillName__list MySQL
+        %p.paragraph
+        %p.paragraph
+        %li.SkillName__list SQLServer
+      %ul.SkillRate
+        %li.SkillRate__list--skill　スキル
+        %p.paragraph
+        %p.paragraph
+        %li.SkillRate__list--rate3
+        %p.paragraph
+        %p.paragraph
+        %li.SkillRate__list--rate2
+    %div.skill__block--SkillDetails
+      %h1.skill__block--title その他
+      %ul.SkillName
+        %li.SkillName__list 技術
+        %p.paragraph
+        %li.SkillName__list GitHub(DeskTop)
+        %p.paragraph
+        %li.SkillName__list AWS(EC2)
+        %p.paragraph
+        %li.SkillName__list Slack
+        %p.paragraph
+        %li.SkillName__list ポルトガル語
+      %ul.SkillRate
+        %li.SkillRate__list--skill　スキル
+        %p.paragraph
+        %li.SkillRate__list--rate4
+        %p.paragraph
+        %li.SkillRate__list--rate2
+        %p.paragraph
+        %li.SkillRate__list--rate4
+        %p.paragraph
+        %li.SkillRate__list--rate5
+%section.portfolio
+  %p.paragraph
+  %h1.portfolio__heading Portfolio
+  %div.portfolio__block
+    %a(class="portfolio__HoverBlock" href="https://github.com/bruno1412/portfolio") GitHubのコードをみに行く
+    %img(class="portfolio__img" src="assets/portfolio.jpg") 作品名：ポートフォリオ
+  %div.portfolio__description
+    %ul.DescriptionList
+      %li.DescriptionList__list 現在ご覧いただいているサイトです。
+      %li.DescriptionList__list--skill 使用言語：html(haml)/css(sass)/javascript(JQuery)
+      %li.DescriptionList__list--skill 使用フレームワーク：Ruby On Rails、JQuery
+      %li.DescriptionList__list--skill 開発期間：1週間
+  %p.paragraph
+  %div.portfolio__block--chatspace
+    %a(class="portfolio__HoverBlock--chatspace" href="https://github.com/bruno1412/chat-space") GitHubのコードをみに行く
+    %img(class="portfolio__img" src="assets/chatspace.png") 作品名：Chat-Space
+  %div.portfolio__description--chatspace
+    %ul.DescriptionList
+      %li.DescriptionList__list--chatspace TechExpertに在籍時に開発したチャット専用アプリです。ajaxを利用した非同期通信、及びインクリメンタルリサーチ、自動更新機能を実装しました。
+      %li.DescriptionList__list--skill 使用言語：html(haml)/css(sass)/javascript(JQuery)/Ruby
+      %li.DescriptionList__list--skill 使用フレームワーク：Ruby On Rails、JQuery
+      %li.DescriptionList__list--skill 開発期間：３日
+  %p.paragraph
+  %div.portfolio__block--mercari
+    %a(class="portfolio__HoverBlock--mercari" href="https://github.com/Hellowold-0703/freemarket_sample_56c") GitHubのコードをみに行く
+    %img(class="portfolio__img" src="assets/mercari.jpg") 作品名：メルカリ(クローンアプリ)
+  %div.portfolio__description--mercari
+    %ul.DescriptionList
+      %li.DescriptionList__list--mercari TechExpert在籍時にチーム開発で作成した有名フリマアプリメルカリのクローンアプリです。私が担当したのは、主にフロントエンドで、ユーザー新規登録ページ(計5ページ)、ユーザーログインページ(1ページ)、サーバーサイドではパンくず機能を担当しました。
+      %li.DescriptionList__list--skill 使用言語：html(haml)/css(sass)/javascript(JQuery)/Ruby
+      %li.DescriptionList__list--skill 使用フレームワーク：Ruby On Rails、JQuery
+      %li.DescriptionList__list--skill 開発期間：２ヶ月(夜間コースだったため)
+  %p.paragraph
+%section.contact
+  %h1.contact__heading CONTACT
+  %div.contact__comment 何かありましたら、気軽にご連絡ください♪
+  %p.paragraph
+  %a(class="TwitterButton" href="https://twitter.com/HIDE72019876")
+    %div(class="fab fa-twitter") 
+    %span Twitter
+
