@@ -196,8 +196,8 @@
     @include sp(){
       font-size:10px;
       top:50%;
-      left:7%;
-      width:50vh;
+      left:0;
+      width:100%;
     };
 
     @include pc(){
