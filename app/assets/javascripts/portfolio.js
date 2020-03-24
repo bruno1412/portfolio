@@ -32,6 +32,10 @@ $(function(){
 
     $("html").animate({scrollTop:6000},{duration:1000});
   });
+  $(".TopButton").click(function(){
+
+    $("html").animate({scrollTop:0},{duration:1000});
+  });
   $(".portfolio__block").on({
     "mouseenter":function(){
       $(".portfolio__HoverBlock").fadeIn(1000);

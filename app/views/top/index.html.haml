@@ -1,5 +1,8 @@
+%head
+  %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
 %link(href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet")
 %div(class="MenuButton" data-text-default="Menu" data-text-clicked="×" href="#") Menu
+%div.TopButton TOP
 %header.HeaderNav
   %ul#menu.menu
     %li.menu__list--top TOP
@@ -30,24 +33,9 @@
 %section.skill
   %p.paragraph
   %h1.skill__heading SKILL
-  %div.skill__block--description
-    %ul.skill__rate
-      %li.skill__rate--rate1
-      %li.skill__rate--rate2
-      %li.skill__rate--rate3
-    %ul.skill__description
-      %li.skill__description--rate 触れたことがある
-      %li.skill__description--rate ある程度コードが書ける、読める
-      %li.skill__description--rate ある程度開発が行える
-    %ul.skill__rate--second
-      %li.skill__rate--rate4
-      %li.skill__rate--rate5
-    %ul.skill__description--second
-      %li.skill__description--rate 自由に開発が行える
-      %li.skill__description--rate 完璧
   %p.paragraph
   %div.skill__block
-    %div.skill__block--SkillDetails
+    %div.skill__block--SkillDetails.clearfix
       %h1.skill__block--title フロントエンド
       %ul.SkillName
         %li.SkillName__list 技術
@@ -89,8 +77,6 @@
         %p.paragraph
         %p.paragraph
         %li.SkillRate__list--rate3
-  %p.paragraph
-  %p.paragraph
   %div.skill__block
     %div.skill__block--SkillDetails
       %h1.skill__block--title データベース

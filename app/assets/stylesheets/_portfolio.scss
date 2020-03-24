@@ -54,6 +54,39 @@
     }
   }
 }
+.TopButton{
+  position:fixed;
+  bottom:2%;
+  right:1%;
+  font-size:30px;
+  display: inline-block;
+  text-decoration: none;
+  color: #668ad8;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  border: solid 2px #668ad8;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+  cursor:pointer;
+  z-index:2;
+  display:none;
+
+  @include sp(){
+    display:block;
+    };
+
+  &:hover{
+    background: #b3e1ff;
+  }
+}
+.clearfix{
+  @include clearfix();
+}
+
 .MenuButton,.active{
   position:fixed;
   top:2%;
@@ -73,6 +106,10 @@
   transition: .4s;
   cursor:pointer;
   z-index:2;
+
+  @include sp(){
+  display:none;
+  };
   
   &:hover{
     background: #b3e1ff;
@@ -84,13 +121,23 @@
   height: 100vh;
   background-color: rgba(25, 25, 120, 0.9);
   background-image: url(office.jpg);
-  background-size:cover;
+  background-size:100%;
+
+  @include sp(){
+    height:50vh;
+    background-size:100% 100%;
+    };
 
   &__name{
     font-size:60px;
     line-height:70vh;
     text-align: center;
     list-style: none;
+
+    @include sp(){
+      line-height:40vh;
+      font-size:30px;
+      };
 
     li{
       display:inline-block;
@@ -99,6 +146,10 @@
     &--initial{
       font-size:100px;
       letter-spacing: -20px;
+      @include sp(){
+        font-size:50px;
+        letter-spacing: -10px;
+        };
     }
 }
 }
@@ -107,6 +158,7 @@
   height: 100vh;
   background-color: #ffffff;
   position:relative;
+  
 
   &__heading{
     text-align: center;
@@ -120,6 +172,15 @@
       width:25%;
       height:40%;
       border-radius:50%;
+
+      @include sp(){
+        position: absolute;
+        top:25%;
+        left:30%;
+        width:40%;
+        height:20%;
+        border-radius:50%;
+        };
     }
   
 
@@ -132,6 +193,25 @@
     height:70vh;
     width:80vh;
 
+    @include sp(){
+      font-size:10px;
+      top:40%;
+      left:10%;
+      width:50vh;
+    };
+    @include tb(){
+      font-size:10px;
+      top:45%;
+      left:50%;
+      width:50vh;
+    };
+    @include pc(){
+      font-size:25px;
+      top:30%;
+      left:50%;
+      width:80vh;
+    };
+
     .greeting{
       width:100%;
     }
@@ -143,6 +223,7 @@
 
 .skill {
   height: 50%;
+  width:100%;
   background-color:rgba(196, 196, 201, 0.9);
   position: relative;
   
@@ -162,8 +243,16 @@
   height:100%;
   line-height: 110px;
   font-size:20px;
-  display:inline-block;
+  position: relative;
+  top:0;
+  left:0;
   text-align:center;
+
+  &--paragraph{
+    width:100%;
+    height:20%;
+    background-color:red;
+  }
   
 
   &--rate0{
@@ -197,6 +286,7 @@
 &--rate4{
   position: relative;
   @include rate();
+
   &:after{
     width:4em;
   }
@@ -220,14 +310,7 @@
 }
 
 }
-&__block--description{
-  width:1250px;
-  height:50vh;
-  background-color:white;
-  margin-bottom: 50px;
-  margin:0  auto;
-  box-shadow: 0 0 15px gray;
-}
+
 &__description{
   background-color:white;
   width: 40vh;
@@ -254,6 +337,7 @@
 &__block{
   width:100%;
   height:35%;
+ 
 
   &--SkillDetails{
     width:80vh;
@@ -263,6 +347,19 @@
     display:inline-block;
     vertical-align: top;
     box-shadow: 0 0 8px gray;
+
+    @include sp(){
+    margin-left:0;
+    width:100%;
+    height:100vh;
+    margin-bottom:100px;
+    };
+    @include tb(){
+      margin-left:0;
+      width:100%;
+      height:130vh;
+      margin-bottom:100px;
+    };
 
     .SkillName{
       background-color:white;
@@ -287,6 +384,11 @@
       line-height:72px;
       font-size:20px;
       @include clearfix();
+
+      @media(min-width:1500px){
+       line-height:100px;
+       font-size:30px;
+      }
 
       &__list{
 
@@ -355,15 +457,7 @@
   position: relative;
 
   &__HoverBlock{
-    position: absolute;
-    font-size:40px;
-    background-color:rgba(196, 196, 201, 0.6);
-    width:100%;
-    height:100%;
-    line-height:350px;
-    color:black;
-    display:none;
-    text-decoration: none;
+    @include HoverBlock();
 
     &--chatspace{
       @include HoverBlock();
@@ -382,13 +476,34 @@
 
   &__block{
     @include PortfolioBlock();
+    @include sp(){
+      height:20%;
+      width:100%;
+      font-size:10px;
+    };
 
     &--chatspace{
       @include PortfolioBlock();
+      @include sp(){
+        height:20%;
+        width:100%;
+        font-size:10px;
+        position: absolute;
+        top:40%;
+        left:0;
+      };
     }
 
     &--mercari{
       @include PortfolioBlock();
+      @include sp(){
+        height:20%;
+        width:100%;
+        font-size:10px;
+        position: absolute;
+        top:72%;
+        left:0;
+      };
     }
 
   }
@@ -402,12 +517,45 @@
     left:51%;
     top:8.8%;
     @include description();
+    @include sp(){
+      position: absolute;
+      top:28%;
+      left:0;
+    };
+    @include tb(){
+      position: absolute;
+      top:11%;
+      left:51;
+    };
+    @include pc(){
+      position: absolute;
+      top:6.2%;
+      left:51;
+    };
+    
 
     &--chatspace{
       position:absolute;
       left:51%;
       top:36.4%;
       @include description();
+
+      @include sp(){
+        position: absolute;
+        top:60%;
+        left:0;
+      };
+      @include tb(){
+        position: absolute;
+        top:39.5%;
+        left:51;
+      };
+      @include pc(){
+        position: absolute;
+        top:33%;
+        left:51;
+      };
+
     }
     
     &--mercari{
@@ -415,6 +563,23 @@
       left:51%;
       top:64%;
       @include description();
+
+      @include sp(){
+        position: absolute;
+        top:90%;
+        left:0;
+      };
+      @include tb(){
+        position: absolute;
+        top:67.7%;
+        left:51;
+      };
+      @include pc(){
+        position: absolute;
+        top:59.7%;
+        left:51;
+      };
+
     }
 
 
@@ -425,10 +590,15 @@
   height: 40vh;
   background-color:rgba(196, 196, 201, 0.9);
   
+  
   &__heading{
     text-align: center;
     font-size:100px;
     text-shadow:3px 3px 0px gray;
+
+    @include sp(){
+      font-size:80px;
+    }
   }
   &__comment{
     text-align:center;
@@ -454,6 +624,16 @@
   text-shadow: 2px 2px 0px #4287d6;
   font-size: 30px;
   cursor:pointer;
+
+  @include sp(){
+    left:25%;
+  }
+  @include tb(){
+    left:36%;
+};
+@include pc(){
+  left:44.5%;
+};
 
   span{
     display:inline-block;
