@@ -195,16 +195,11 @@
 
     @include sp(){
       font-size:10px;
-      top:40%;
+      top:50%;
       left:10%;
       width:50vh;
     };
-    @include tb(){
-      font-size:10px;
-      top:45%;
-      left:50%;
-      width:50vh;
-    };
+
     @include pc(){
       font-size:25px;
       top:30%;
@@ -354,12 +349,6 @@
     height:100vh;
     margin-bottom:100px;
     };
-    @include tb(){
-      margin-left:0;
-      width:100%;
-      height:130vh;
-      margin-bottom:100px;
-    };
 
     .SkillName{
       background-color:white;
@@ -385,7 +374,7 @@
       font-size:20px;
       @include clearfix();
 
-      @media(min-width:1500px){
+      @include pc(){
        line-height:100px;
        font-size:30px;
       }
@@ -522,11 +511,6 @@
       top:28%;
       left:0;
     };
-    @include tb(){
-      position: absolute;
-      top:11%;
-      left:51;
-    };
     @include pc(){
       position: absolute;
       top:6.2%;
@@ -544,11 +528,6 @@
         position: absolute;
         top:60%;
         left:0;
-      };
-      @include tb(){
-        position: absolute;
-        top:39.5%;
-        left:51;
       };
       @include pc(){
         position: absolute;
@@ -568,11 +547,6 @@
         position: absolute;
         top:90%;
         left:0;
-      };
-      @include tb(){
-        position: absolute;
-        top:67.7%;
-        left:51;
       };
       @include pc(){
         position: absolute;
@@ -628,10 +602,8 @@
   @include sp(){
     left:25%;
   }
-  @include tb(){
-    left:36%;
-};
-@include pc(){
+
+  @include pc(){
   left:44.5%;
 };
 

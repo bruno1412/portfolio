@@ -87,11 +87,6 @@
           top:0;
           left:24%;
         }
-        @media(max-width:800px){
-          position:absolute;
-          top:0;
-          left:37.5%;
-        }
         @media(min-width:1500px){
           position:absolute;
           top:0;
@@ -118,11 +113,6 @@
           height:10%;
           width:100%;
         }
-        @media(max-width:800px){
-          font-size:10px;
-          height:25%;
-          width:48%;
-        }
         
 
         .DescriptionList{
@@ -137,9 +127,6 @@
             font-size:20px;
             @media(max-width:480px){
               margin-top:30px;
-            }
-            @media(max-width:800px){
-              height:20%;
             }
             @media(min-width:1500px){
               font-size:30px;
@@ -170,9 +157,6 @@
                 line-height:20px;
                 margin-bottom:50px;
               }
-              @media(max-width:800px){
-                line-height:30px;
-              }
               @media(min-width:1500px){
                 font-size:30px;
                 line-height:50px;
@@ -192,11 +176,6 @@
                 width:100%;
                 line-height:20px;
                 margin-bottom:50px;
-              }
-              @media(max-width:800px){
-                line-height:30px;
-                font-size:15px;
-                margin-bottom:30px;
               }
               @media(min-width:1500px){
                 font-size:30px;
@@ -222,10 +201,6 @@
               font-size:30px;
               line-height:100px;
             }
-            @media(max-width:800px){
-              font-size:30px;
-              line-height:100px;
-            }
         }
       
         @mixin PortfolioBlock(){
@@ -246,11 +221,7 @@
     @content;
   }
 }
-@mixin tb(){
-  @media(max-width:800px){
-    @content;
-  }
-}
+
 @mixin pc(){
   @media(min-width:1500px){
     @content;
