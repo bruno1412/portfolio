@@ -22,11 +22,11 @@ $(function(){
   });
   $(".menu__list--skill").click(function(){
 
-    $("html").animate({scrollTop:1550},{duration:1000});
+    $("html").animate({scrollTop:1600},{duration:1000});
   });
   $(".menu__list--portfolio").click(function(){
 
-    $("html").animate({scrollTop:3750},{duration:1000});
+    $("html").animate({scrollTop:2650},{duration:1000});
   });
   $(".menu__list--contact").click(function(){
 

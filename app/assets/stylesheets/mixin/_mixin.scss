@@ -1,9 +1,7 @@
-@mixin clearfix() {
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+@mixin item-center() {
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 @mixin MenuHover() {
   &:Hover {
@@ -53,20 +51,11 @@
   }
   }
   @mixin rate(){
-    background-color:rgba(196, 196, 201, 0.6);
-    &:before{
-      content:"★★★★★";
-      color:#ccc;
-    }
-    
-    &:after{
-      color:yellow;
-      content:"★★★★★";
-      overflow:hidden;
-      position:absolute;
-      top:0;
-      left:34%;
-    }
+    content:"★★★★★";
+    position:absolute;
+    top:0;
+    left:0;
+    color:#FFA500;
     }
     @mixin SkillRate(){
       &:before{
@@ -188,12 +177,10 @@
         }
         }
         @mixin HoverBlock(){
-          position: absolute;
           font-size:40px;
           background-color:rgba(196, 196, 201, 0.6);
-          width:100%;
+          width:50%;
           height:100%;
-          line-height:400px;
           color:black;
           display:none;
           text-decoration: none;
