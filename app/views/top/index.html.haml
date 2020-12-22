@@ -1,16 +1,21 @@
 %head
   %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
 %link(href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet")
-%div(class="MenuButton" data-text-default="Menu" data-text-clicked="×" href="#") Menu
-%div.TopButton TOP
+/%div(class="MenuButton" data-text-default="Menu" data-text-clicked="×" href="#") Menu
+/%div.TopButton TOP
 %header.HeaderNav
   %ul#menu.menu
-    %li.menu__list--top TOP
-    %li.menu__list--profile PROFILE
-    %li.menu__list--skill SKILL
-    %li.menu__list--portfolio PORTFOLIO
-    %li.menu__list--contact CONTACT
-%section.top
+    %li.menu__list--top 
+      %a(class="menu-color"href="#top") TOP
+    %li.menu__list--profile
+      %a(class="menu-color"href="#profile") PROFILE
+    %li.menu__list--skill
+      %a(class="menu-color"href="#skill") SKILL
+    %li.menu__list--portfolio
+      %a(class="menu-color"href="#portfolio") PORTFOLIO
+    %li.menu__list--contact
+      %a(class="menu-color"href="#contact") CONTACT
+%section#top.top
   %div.top-wrapper
     %ul.top-wrapper__name
       %li.top-wrapper__name--initial H
@@ -19,49 +24,51 @@
       %li akai's 
       %li.top-wrapper__name--initial P
       %li ortfolio
-%section.profile
+%section#profile.profile
   %div.profile__heading
     %h1.profile__heading--title Profile
   %div.profile-wrapper
     %div.profile-wrapper__inner
       %img(class="profile-wrapper__inner--img" src="assets/photo.jpg")
     %div.profile-wrapper__introduction
-      %p.greeting ご訪問いただきありがとうございます!皆さん初めまして！
+      %p.greeting ご訪問いただきありがとうございます！皆さん初めまして。
       %p.greeting 平成７年生まれの筋肉系駆け出しエンジニアHidekiと申します。
       %p.greeting 社会人歴は約２年で、とある外資系IT企業さんのテクニカルサポートチームで２年間勤めておりました。
       %p.greeting 専門学校時代に初めてプログラミングを学び、その頃から様々な言語に興味を持つようになりました。
-      %p.greeting 結局、尽きない好奇心からエンジニアになろうと決意し、TECH:EXPERT夜間コースに半年間通い、卒業しました。
+      %p.greeting 中でもWEB言語に興味をもち、TECH:EXPERT夜間コースに半年間通い、卒業しました。
       %p.greeting 現在はwebエンジニア業界を目指し、日々奮闘しております。
-      %p.greeting ちなみに趣味は筋トレ(主にパワーリフティング種目)で、１年間で69kgから91kg(計22kg)の増量を成功させました。
-%section.skill
+      %p.greeting また、筋トレを趣味にしており、１年間で69kgから91kg(計22kg)の増量を成功させました。
+      %p.greeting 重量上げもベンチプレス125kg、スクワット180kg、デッドリフト200kgと上級者の域に達しつつあります。
+      %p.greeting 上記のトレーニング経験を元に筋トレ専用webサービスの開発も予定しています。
+%section#skill.skill
   %div.skill__heading
     %h1.skill__heading--text SKILL
   %div.skill-wrapper
     %div.skill-wrapper__item
-      %h3.skill-wrapper__item--title HTML,CSS(HAML,SCSS)
+      %h3.skill-wrapper__item--title 【HTML,CSS(HAML,SCSS)】
       %div.skill-wrapper__item--rate4
-      %div.skill-wrapper__item--text 基本的なことはできます。以前、Railsでアプリを開発した時にHamlとScssを導入した経験があり、両方でコードを書けます。
+      %div.skill-wrapper__item--text 既存のサイトのフロントエンド部分を模倣する程度のコーディングならできます。以前、Railsでアプリを開発した時にHAMLとSCSSを導入した経験があり、両方でコードを書けます。
     %div.skill-wrapper__item
       %h3.skill-wrapper__item--title JavaScript(JQuery)
-      %div.skill-wrapper__item--rate3
-      %div.skill-wrapper__item--text まだまだ外部サイトに頼リがちですが、JQueryも含めて基本的なことはできます。現在はNode.JSに興味を持ち、プチアプリ開発を目標に学習中です。
+      %div.skill-wrapper__item--rate2
+      %div.skill-wrapper__item--text 基本的な文法に関しては問題なく、コードは読めます。外部サイトを参考にしながらJQueryでのクリックイベントの付与程度なら書けます。時間はかかりますが、Ajaxを利用した非同期通信やインクリメンタルサーチの実装もできます。
     %div.skill-wrapper__item
       %h3.skill-wrapper__item--title Ruby(Ruby on Rails)
       %div.skill-wrapper__item--rate3
-      %div.skill-wrapper__item--text 基本的なことはできますが、バックエンドとしての経験が浅いため、少々不安があります。
+      %div.skill-wrapper__item--text 基本的な文法に関しては問題なく、コードは読めます。railsのgemやルーティングの設定についても理解はしていて、簡単なwebアプリ程度であれば一から作れます。
     %div.skill-wrapper__item
       %h3.skill-wrapper__item--title SQL
-      %div.skill-wrapper__item--rate3
-      %div.skill-wrapper__item--text 以前働いていた職場で使用していたのもあり、基本的な文法はできます
+      %div.skill-wrapper__item--rate2
+      %div.skill-wrapper__item--text 以前働いていた職場では用意されたクエリーを投げていました。四大命令であるSELECT、UPDATE、INSERT、DELETEの構文から始まり、WHEREを使った絞り込み、JOINでのテーブル結合、GROUP BYを利用した集計程度なら書けます。
     %div.skill-wrapper__item
       %h3.skill-wrapper__item--title Github
-      %div.skill-wrapper__item--rate4
+      %div.skill-wrapper__item--rate3
       %div.skill-wrapper__item--text 現在も使用しており、コミットやプルリクエスト、ブランチの切り分けなどの基本的なことはできます
     %div.skill-wrapper__item
       %h3.skill-wrapper__item--title ポルトガル語
       %div.skill-wrapper__item--rate5
       %div.skill-wrapper__item--text 親がブラジル出身で幼い頃から触れてきたので、日常会話ぐらいならそつなくこなせます。
-%section.portfolio
+%section#portfolio.portfolio
   %div.portfolio__heading
     %h1.portfolio__heading--title Portfolio
   %div.portfolio-wrapper
@@ -69,7 +76,7 @@
     %div.portfolio-wrapper__item
       %h2.portfolio-wrapper__item--title 作品タイトル：ポートフォリオ
       %div.portfolio-wrapper__item--text 現在ご覧いただいているサイトです。テンプレートなしで一から作成しました。
-      %div.portfolio-wrapper__item--text 使用言語：html(haml)/css(sass)/javascript(JQuery)
+      %div.portfolio-wrapper__item--text 使用言語：HTML(HAML)/CSS(SCSS)/JavaScript(JQuery)
       %div.portfolio-wrapper__item--text 使用フレームワーク：Ruby On Rails、JQuery
       %a(class="portfolio-wrapper__item--url" href="https://github.com/bruno1412/portfolio")  Gitコードはこちら
   %div.portfolio-wrapper
@@ -77,7 +84,7 @@
     %div.portfolio-wrapper__item
       %h2.portfolio-wrapper__item--title 作品タイトル：Chat-Space
       %div.portfolio-wrapper__item--text TechExpert(※現テックキャンプ)に在籍時に開発したチャット専用アプリです。ajaxを利用した非同期通信、及びインクリメンタルリサーチ、自動更新機能を実装しました。
-      %div.portfolio-wrapper__item--text 使用言語：html(haml)/css(sass)/javascript(JQuery)/Ruby
+      %div.portfolio-wrapper__item--text 使用言語：HTML(HAML)/CSS(SCSS)/JavaScript(JQuery)/Ruby
       %div.portfolio-wrapper__item--text 使用フレームワーク：Ruby On Rails、JQuery
       %a(class="portfolio-wrapper__item--url" href="https://github.com/bruno1412/chat-space")  Gitコードはこちら
   %div.portfolio-wrapper
@@ -85,13 +92,13 @@
     %div.portfolio-wrapper__item
       %h2.portfolio-wrapper__item--title 作品タイトル：メルカリ(クローンアプリ)
       %div.portfolio-wrapper__item--text TechExpert(※現テックキャンプ)在籍時にチーム開発で作成した有名フリマアプリメルカリのクローンアプリです。私が担当したのは、主にフロントエンドで、ユーザー新規登録ページ(計5ページ)、ユーザーログインページ(1ページ)、サーバーサイドではパンくず機能を担当しました。
-      %div.portfolio-wrapper__item--text 使用言語：html(haml)/css(sass)/javascript(JQuery)/Ruby
+      %div.portfolio-wrapper__item--text 使用言語：HTML(HAML)/CSS(SCSS)/JavaScript(JQuery)/Ruby
       %div.portfolio-wrapper__item--text 使用フレームワーク：Ruby On Rails、JQuery
       %a(class="portfolio-wrapper__item--url" href="https://github.com/Hellowold-0703/freemarket_sample_56c")  Gitコードはこちら
-%section.contact
+%section#contact.contact
   %div.contact__heading 
     %h1.contact__heading--title CONTACT
-  %p.contact__comment お問い合わせの際は下記メールアドレスにてご連絡ください!
+  %p.contact__comment お気軽にお問い合わせください！
   %div.contact-wrapper
     %a(class="contact-wrapper__mail-font" href="mailto:touho1507@gmail.com")
       %i(class="fas fa-envelope-square fa-3x")

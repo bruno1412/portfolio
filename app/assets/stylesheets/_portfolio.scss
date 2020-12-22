@@ -1,3 +1,6 @@
+.menu-color{
+  color:#668ad8;
+}
 .HeaderNav{
   background-color:rgba(50, 50, 55, 0.3);
   position: fixed;
@@ -6,11 +9,13 @@
   z-index: 1;
   width: 100%;
   height:15%;
-  display:none;
+  
+  
   font-size:30px;
 
   .menu{
     cursor:pointer;
+
 
     &__list{
       width:20%;
@@ -54,6 +59,7 @@
     }
   }
 }
+/*
 .TopButton{
   position:fixed;
   bottom:2%;
@@ -115,7 +121,7 @@
     background: #b3e1ff;
   }
 }
-
+*/
 /*--------
 ヘッダー
 --------*/
@@ -281,7 +287,7 @@
         font-size:30px;
       }
 
-      &--rate,&--rate3,&--rate4,&--rate5{
+      &--rate,&--rate2,&--rate3,&--rate4,&--rate5{
         position:relative;
         display:inline-block;
         height:10vh;
@@ -301,6 +307,13 @@
         &:after{
           color:#FFA500;
           overflow:hidden;
+        }
+      }
+
+      &--rate2{
+        &:after{
+          width:2em;
+          @include rate();
         }
       }
 
@@ -339,8 +352,8 @@
 ---------*/
 
 .portfolio {
-  height: 330vh;
-  background-color:rgba(196, 196, 201, 0.9);
+  height: 360vh;
+  background-color:white;
 
   &__heading{
     text-shadow:3px 3px 0px gray;
@@ -360,6 +373,7 @@
     display:flex;
     width:100%;
     height:100vh;
+    padding-bottom:10vh;
 
     &__img{
       width:60%;

@@ -1,3 +1,4 @@
+//メニューボタンのクリックイベント
 $(function(){
   $(".MenuButton").click(function(){
     $(".HeaderNav").fadeIn(1000);
@@ -12,6 +13,20 @@ $(function(){
 
 		$(this).html(text);
   });
+
+//メニューのスクロール機能
+  $(function(){
+    $('a[href^=#]').click(function(){
+      var speed = 800;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+    });
+  });
+
+  /*
   $(".menu__list--top").click(function(){
 
     $("html").animate({scrollTop:0},{duration:1000});
@@ -35,7 +50,9 @@ $(function(){
   $(".TopButton").click(function(){
 
     $("html").animate({scrollTop:0},{duration:1000});
-  });
+  });*/
+
+
   $(".portfolio__block").on({
     "mouseenter":function(){
       $(".portfolio__HoverBlock").fadeIn(1000);
