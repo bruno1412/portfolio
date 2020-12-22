@@ -16,7 +16,7 @@ $(function(){
 
 //メニューのスクロール機能
   $(function(){
-    $('a[href^=#]').click(function(){
+    $('a[href^="#"]').click(function(){
       var speed = 800;
       var href= $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
